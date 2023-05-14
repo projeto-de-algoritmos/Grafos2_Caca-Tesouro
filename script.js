@@ -163,8 +163,8 @@ function draw_path() {
     path = breadth_first_search(startNode, endNode);
   } else if (search_mode === "dfs") {
     path = depth_first_search(startNode, endNode);
-    /*} else if (search_mode === "dijkstra") {
-    path = dijkstra(startNode, endNode);*/
+  } else if (search_mode === "dijkstra") {
+    path = dijkstra(startNode, endNode);
   } else {
     console.error("Invalid search mode:", search_mode);
     return;
@@ -233,6 +233,28 @@ function get_neighbors(node) {
   );
 }
 
+function getNeighborsDijkstra(node) {
+  const i = Number(node.dataset.i);
+  const j = Number(node.dataset.j);
+  const neighbors = [
+    (grid_matrix[i - 1] || [])[j - 1],
+    (grid_matrix[i] || [])[j - 1],
+    (grid_matrix[i + 1] || [])[j - 1],
+    (grid_matrix[i + 1] || [])[j],
+    (grid_matrix[i + 1] || [])[j + 1],
+    (grid_matrix[i] || [])[j + 1],
+    (grid_matrix[i - 1] || [])[j + 1],
+    (grid_matrix[i - 1] || [])[j],
+  ];
+
+  return neighbors.filter(
+    (neighbor) =>
+      neighbor !== undefined &&
+      !neighbor.classList.contains("obstacle") &&
+      !neighbor.classList.contains("visited")
+  );
+}
+
 function depth_first_search(start, end) {
   let visited = new Set();
   let stack = [[start, []]];
@@ -257,7 +279,69 @@ function depth_first_search(start, end) {
   return null;
 }
 
-//function dijkstra(start, end) {}
+function dijkstra(start, end) {
+  const distances = new Map();
+  const previous = new Map();
+  const unvisited = new Set();
+
+  for (const row of grid_matrix) {
+    for (const elem of row) {
+      distances.set(elem, Infinity);
+      previous.set(elem, null);
+      unvisited.add(elem);
+    }
+  }
+
+  distances.set(start, 0);
+
+  while (unvisited.size > 0) {
+    let minDistance = Infinity;
+    let minNode = null;
+
+    for (const node of unvisited) {
+      const distance = distances.get(node);
+      if (distance < minDistance) {
+        minDistance = distance;
+        minNode = node;
+      }
+    }
+
+    if (minNode === null || minDistance === Infinity) {
+      break;
+    }
+
+    unvisited.delete(minNode);
+
+    if (minNode === end) {
+      return buildPath(end, previous);
+    }
+
+    const neighbors = getNeighborsDijkstra(minNode);
+
+    for (const neighbor of neighbors) {
+      const distance = distances.get(minNode) + 1;
+      if (distance < distances.get(neighbor)) {
+        distances.set(neighbor, distance);
+        previous.set(neighbor, minNode);
+      }
+    }
+  }
+
+  return null;
+}
+
+function buildPath(end, previous) {
+  const path = [];
+  let current = end;
+
+  while (current !== null) {
+    path.unshift(current);
+    current = previous.get(current);
+  }
+
+  return path;
+}
+
 
 function restart_obstacles() {
   restart.play();
