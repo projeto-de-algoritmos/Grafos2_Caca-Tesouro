@@ -21,8 +21,9 @@
   <div class="box main">
 
     <label for="guide"><br>Ahoy, companheiro pirata!<br><br>Escolha um ponto de partida e destino clicando no grid
-      abaixo.<br><br>Nosso objetivo é encontrar o caminho mais curto até<br>o aguardado tesouro.<br><br>Escolha entre
-      BFS (Breadth First Search) ou DFS (Depth First Search).</label>
+      abaixo.<br><br>Nosso objetivo é encontrar o caminho até o aguardado tesouro.<br><br>Escolha entre
+      Dijkstra, DFS (Depth First Search) ou BFS (Breadth First Search).<br><br>Por Dijkstra você consegue navegar
+      pela diagonal, podendo ultrapassar<br>pelo meio de dois obstáculos caso haja caminho após eles!</label>
 
     <div class="box controls">
 
@@ -48,9 +49,9 @@
       <div class="item control3" id="search-mode-selector">
         <label for="search-mode">Modo de busca:</label>
         <select id="search-mode" onchange="change_search_mode()">
-          <option value="bfs">BFS</option>
-          <option value="dfs">DFS</option>
           <option value="dijkstra">Dijkstra</option>
+          <option value="dfs">DFS</option>
+          <option value="bfs">BFS</option>
         </select>
       </div>
 
