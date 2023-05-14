@@ -10,7 +10,7 @@
 | 19/0038900  |  Victor de Souza Cabral |
 
 ## Sobre 
-O objetivo deste projeto é criar um jogo em que o usuário posiciona em um mapa (grid) de quadrados um navio no ponto de início e um tesouro no ponto de destino. A partir disso, o programa utiliza o algoritmo Breadth First Search (BFS) ou Depth First Search (DFS) para encontrar o caminho do navio até o tesouro.
+O objetivo deste projeto é criar um jogo em que o usuário posiciona em um mapa (grid) de quadrados um navio no ponto de início e um tesouro no ponto de destino. A partir disso, o programa utiliza o algoritmo de Dijkstra, Depth First Search (DFS) ou Breadth First Search (BFS) para encontrar o caminho do navio até o tesouro.
 
 O programa possui as funções de escolher o número de obstáculos, embaralhar eles, alterar o tamanho do grid para um máximo de 20x20, selecionar o tipo de busca e informar o número de passos que foram precisos para se chegar no baú.
 
