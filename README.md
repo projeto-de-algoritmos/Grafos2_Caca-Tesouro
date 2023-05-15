@@ -17,12 +17,18 @@ O programa possui as funções de escolher o número de obstáculos, embaralhar 
 ## Screenshots
 
 <img src="assets/caca-tesouro_logo.png" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
-<img src="assets/caca-tesouro_tudo.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 70%;">
+<img src="assets/caca-tesouro_tudo.png" style="display: block; margin-left: auto; margin-right: auto; width: 70%;">
 <img src="assets/caca-tesouro_guia.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
 <img src="assets/caca-tesouro_controles.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
 <img src="assets/caca-tesouro_grid.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
 
-## Vídeo de Apresentação
+## Vídeo de Apresentação (Grafos 2)
+
+Vídeo contendo explicação das modificações feitas para a entrega da unidade 2. Foco em apresentar as novidades implementadas. Para melhor contexto do projeto em geral assistir o vídeo de apresentação complementar. Conteúdo: Dijkstra.
+
+## Vídeo de Apresentação Complementar (Grafos 1)
+
+Vídeo complementar contendo explicação da entrega feita para a entrega da unidade 1. Conteúdo: Depth First Search (DFS) ou Breadth First Search (BFS)
 
 <a href="https://www.youtube.com/watch?v=L_0gyZoNA6s" target="_blank">
   <img src="assets/link_video.png" alt="Apresentação">
@@ -33,7 +39,7 @@ O programa possui as funções de escolher o número de obstáculos, embaralhar 
 **Framework**: Não há necessidade de instalar nenhum framework. Para rodar o projeto, basta clonar o repositório e abrir o arquivo index.html no navegador ou acessar o link.<br>
 
 ## Uso 
-Acessar o link <https://projeto-de-algoritmos.github.io/Grafos1_Caca-Tesouro/>
+Acessar o link <https://projeto-de-algoritmos.github.io/Grafos2_Caca-Tesouro/>
 
 Após abrir no navegador, o usuário pode selecionar o navio e o tesouro clicando em dois quadrados no mapa. O programa irá então calcular o caminho mais curto utilizando o algoritmo BFS ou DFS e exibir o caminho no mapa. 
 
