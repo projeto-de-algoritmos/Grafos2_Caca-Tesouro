@@ -24,11 +24,20 @@ O programa possui as funções de escolher o número de obstáculos, embaralhar 
 
 ## Vídeo de Apresentação (Grafos 2)
 
-Vídeo contendo explicação das modificações feitas para a entrega da unidade 2. Foco em apresentar as novidades implementadas. Para melhor contexto do projeto em geral assistir o vídeo de apresentação complementar. Conteúdo: Dijkstra.
+Vídeo contendo explicação das modificações feitas para a entrega da unidade 2. Foco em apresentar as novidades implementadas. 
 
+**Conteúdo:** Dijkstra.
+
+(Para melhor contexto do projeto em geral assistir o vídeo de apresentação complementar).
+
+<a href="https://www.youtube.com/watch?v=q8ADh35hU58" target="_blank">
+  <img src="assets/link_video2.png" alt="Apresentação">
+</a>
 ## Vídeo de Apresentação Complementar (Grafos 1)
 
-Vídeo complementar contendo explicação da entrega feita para a entrega da unidade 1. Conteúdo: Depth First Search (DFS) ou Breadth First Search (BFS)
+Vídeo complementar contendo explicação da entrega feita para a entrega da unidade 1. 
+
+**Conteúdo:** Depth First Search (DFS) ou Breadth First Search (BFS)
 
 <a href="https://www.youtube.com/watch?v=L_0gyZoNA6s" target="_blank">
   <img src="assets/link_video.png" alt="Apresentação">
