@@ -33,6 +33,7 @@ Vídeo contendo explicação das modificações feitas para a entrega da unidade
 <a href="https://www.youtube.com/watch?v=q8ADh35hU58" target="_blank">
   <img src="assets/link_video2.png" alt="Apresentação">
 </a>
+
 ## Vídeo de Apresentação Complementar (Grafos 1)
 
 Vídeo complementar contendo explicação da entrega feita para a entrega da unidade 1. 
